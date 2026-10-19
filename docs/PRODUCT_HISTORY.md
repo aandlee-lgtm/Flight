@@ -83,6 +83,20 @@ three times.
 
 **Decided.** Waiting for the owner's choice between A, B and C.
 
+### 2026-10-19 — Travelpayouts requires a website
+**Asked.** The owner found that using a Travelpayouts account means having a website and adding
+code to its header.
+
+**Explained.** Correct: Travelpayouts asks partners to confirm they own a website before giving
+API access, by placing a verification snippet in the site's `<head>`. A free way to do that is
+a one-page site on GitHub Pages. Pages is free only for public repositories, so it would go in
+a separate public repository, keeping the Flight repository private. The page should be a real,
+small fare-watch page; Travelpayouts may review it. The verification snippet isn't a secret and
+can be pasted into the page. The alternative is option A (links only, no accounts, no automatic
+prices).
+
+**Decided.** Waiting for the owner.
+
 ---
 
 ## 2. Definitions
