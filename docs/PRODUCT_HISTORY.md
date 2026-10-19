@@ -103,6 +103,12 @@ Travelpayouts verification and asked for step-by-step instructions, which were g
 public repository, check Pages settings, give the Claude GitHub App access, register the site in
 Travelpayouts, send the verification snippet, then store the API token as a Flight secret.
 
+### 2026-10-19 — Website published
+The owner created `aandlee-lgtm.github.io` but couldn't find the GitHub App installations page
+(step 8). That step wasn't needed: the Claude app already had access. A one-page "Sydney Fare
+Watch" site was published there (destinations, how it works, no prices yet), with a marked place
+in its `<head>` for the Travelpayouts verification snippet.
+
 ---
 
 ## 2. Definitions
