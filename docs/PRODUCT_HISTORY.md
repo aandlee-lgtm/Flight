@@ -131,6 +131,26 @@ started it directly. Results:
   Pudong). That could let the transit check confirm connection airports instead of saying
   "unverified". The format isn't documented, so it needs testing first.
 
+### 2026-10-19 — "Maybe we did this all incorrectly": the purpose restated
+**Said.** The owner wants a daily check that looks for the best *real* flights well into the
+future, so an exceptional fare prompts them to plan a holiday for those dates. They want to enter
+their own key cities, and the results must be real.
+
+**Explained.** Nothing built so far is wasted: the website, token and probe are the plumbing for
+exactly this. What changes is the focus:
+- **The owner's watchlist** replaces the fixed destination priorities.
+- **"Compelling fare" alerts** replace the full comparison report.
+- **"Real" means:** the fare was actually found by a real search, recently. Prices older than 3
+  days are dropped, every fare carries a link that opens a live search for the same flights and
+  dates, and the A$ checks apply.
+- **What free data can't do:** guarantee the fare is still there when the link is opened. The
+  link is the final check. Guaranteed live prices need a paid source, which the owner has ruled
+  out.
+- **Expected gaps:** far-ahead months on quieter routes will often have no recent real fare.
+  The email says so rather than guessing.
+
+**Decided.** Backlog F14 records the design. Waiting for the owner's city list and target prices.
+
 ---
 
 ## 2. Definitions
@@ -147,5 +167,9 @@ started it directly. Results:
   it means "check the live link now", never "buy".
 - **Routing not verified** — a connecting itinerary whose connection airports the free source
   does not give; it may still connect in an excluded country, so check before buying.
+- **Compelling fare** — a real fare at or below the owner's target price for that city, or
+  among the cheapest seen for that city and month once enough history exists.
+- **Real (free version)** — found by a real search within the last 3 days, priced in A$, with a
+  link that reproduces it. Older prices are dropped.
 - **Search link** — a URL that reproduces the route, dates and cabin, not the exact fare; labelled
   as such.
