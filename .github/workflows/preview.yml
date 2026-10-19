@@ -1,0 +1,21 @@
+name: Preview scan
+# Runs the public Sydney Fare Watch code with this repository's token and prints the page,
+# without publishing anything. Manual only.
+on: workflow_dispatch
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {repository: aandlee-lgtm/aandlee-lgtm.github.io}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python3 -m unittest discover -s tests -t .
+      - run: python3 -m farewatch --out preview.html --no-history
+        env:
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+      - run: |
+          echo "=====PAGE-BEGIN====="
+          base64 -w 0 < preview.html | fold -w 4000
+          echo
+          echo "=====PAGE-END====="
