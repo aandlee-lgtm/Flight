@@ -115,6 +115,22 @@ loads from `emrldco.com`. It was placed in the `<head>` of https://aandlee-lgtm.
 can also turn travel links on that page into Travelpayouts affiliate links. It doesn't touch
 the Flight app or the emails.
 
+### 2026-10-19 — Milestone 1 (free version) reached
+The owner saved `TRAVELPAYOUTS_TOKEN` but could not find the Probe workflow on GitHub, so Claude
+started it directly. Results:
+- SYD–TYO, departing April 2027: the API answered in AUD with **0 cached fares**, as did SYD–PAR
+  for February 2027. Far-ahead months and less-searched routes have little or no cached data
+  (risk R4).
+- SYD–TYO, departing January 2027: 13 cached fares. The cheapest within 12–17 nights was
+  **A$1,719 return, China Eastern (MU), 3 → 20 January 2027 (17 nights), 1 stop each way**,
+  routing marked "unverified". It was found by an Aviasales user on 17 October 2026 and carries
+  a live Aviasales search link. Three more China Eastern fares followed at A$1,790–1,968.
+- A$ checks seen in this result: the API answered in AUD, and the link itself says
+  `expected_price_currency=aud` with the same amount (`expected_price=1719`).
+- Found for later: the Aviasales link encodes the airports flown (e.g. `SYDPVGNRT`, via Shanghai
+  Pudong). That could let the transit check confirm connection airports instead of saying
+  "unverified". The format isn't documented, so it needs testing first.
+
 ---
 
 ## 2. Definitions
