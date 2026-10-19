@@ -1,5 +1,9 @@
 # Sydney Flight Intelligence — Phase 1: provider feasibility and architecture
 
+> **Update (1.0.0, 19 Oct 2026):** email was dropped in favour of a daily web page at
+> https://aandlee-lgtm.github.io, and the scan follows the owner's own watchlist. See
+> [RELEASES.md](RELEASES.md). The provider findings below still apply.
+
 Revision 2, 2026-10-19: **no paid access** (the owner's decision). Revision 1 recommended Duffel
 (paid per search); it is kept in the history only. Nothing in this document is a fare.
 

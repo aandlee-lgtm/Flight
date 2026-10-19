@@ -163,6 +163,37 @@ not flagged as compelling.
 **Shipped.** `watchlist.toml` in the repository, for the owner to edit. Nothing built yet
 (waiting for `build_new`).
 
+### 1.0.0 — build_new: daily web page instead of email (19 October 2026)
+**Asked for.** Trip lengths of 1–6 weeks confirmed. "Maybe not an email, just a static html that
+I can look at myself from the web." Then `build_new`.
+
+**Explained and decided.**
+- **Where it lives:** free GitHub Pages only works for public repositories, so the scanner, the
+  watchlist and the daily workflow live in the public `aandlee-lgtm.github.io` repository, and
+  the page is its home page. This private repository keeps the history, backlog, release notes
+  and diagnostics workflows. The page and the watchlist are therefore publicly visible; no
+  personal details are on them.
+- **Checking the source first:** an exploration run showed that each fare's link carries the
+  date the fare was found (`search_date`), the AUD amount it was priced at, and the airports
+  flown on each leg. The scanner uses all three, so freshness, the A$ check and the no-Middle-East
+  rule rest on the fare itself rather than on guesses.
+- **Rules in 1.0.0:**
+  - Real fares only: found in the last 3 days.
+  - Three A$ checks: the source's currency, the link's currency and amount, and a plausible range.
+  - Trips of 1–6 weeks, up to 12 months ahead.
+  - No connection airport in the Middle East or Türkiye, and no airline based there.
+  - Cheapest fare per city per month; up to three highlights, one per city, under the target price.
+  - The 30-day low appears after 14 days of history.
+- **First real scan (preview, 19 Oct, 93 requests):** fares found for Guangzhou (A$789 return,
+  27 Oct–5 Nov, China Eastern), Tokyo (A$927, 1–13 Nov, China Southern via Guangzhou), Hong Kong
+  (A$920, November, Scoot via Singapore), and London (A$1,420, February, China Southern via
+  Guangzhou). Paris had only one recent fare (A$2,224); many cached prices were older than 3
+  days and were dropped.
+- **Owner action needed:** add the same `TRAVELPAYOUTS_TOKEN` secret to the
+  `aandlee-lgtm.github.io` repository so the daily run there can search.
+
+**Shipped (1.0.0).** See [RELEASES.md](RELEASES.md).
+
 ---
 
 ## 2. Definitions
