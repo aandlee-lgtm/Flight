@@ -97,6 +97,12 @@ prices).
 
 **Decided.** Waiting for the owner.
 
+### 2026-10-19 — Free website chosen
+**Decided.** The owner chose the free GitHub Pages website (`aandlee-lgtm.github.io`) for
+Travelpayouts verification and asked for step-by-step instructions, which were given: create the
+public repository, check Pages settings, give the Claude GitHub App access, register the site in
+Travelpayouts, send the verification snippet, then store the API token as a Flight secret.
+
 ---
 
 ## 2. Definitions
