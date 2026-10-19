@@ -1,0 +1,23 @@
+name: Probe
+# Milestone 1: one real Travelpayouts search, run on GitHub's network. Manual only.
+on:
+  workflow_dispatch:
+    inputs:
+      dest: {description: 'Destination IATA city/airport (e.g. TYO, PAR, CAN)', required: true, default: 'TYO'}
+      month: {description: 'Departure month YYYY-MM', required: true}
+      airline: {description: 'Optional airline filter (CZ, VA)', required: false, default: ''}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Search
+        working-directory: probe
+        env:
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+          DEST: ${{ inputs.dest }}
+          MONTH: ${{ inputs.month }}
+          AIRLINE: ${{ inputs.airline }}
+        run: python3 indicative_search.py --dest "$DEST" --month "$MONTH" ${AIRLINE:+--airline "$AIRLINE"}
