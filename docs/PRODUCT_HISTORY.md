@@ -54,6 +54,35 @@ Duffel probe removed. Running cost A$0.
 (`probe/indicative_search.py`, also runnable from Actions → Probe), transit tests and working
 rules. No application build, version or release.
 
+### 2026-10-19 — Google Flights, Trip.com and Booking.com instead of Travelpayouts
+**Asked for.** Search Google Flights, Trip.com and Booking.com directly instead of opening a
+Travelpayouts account; every result must link to where it was found; all prices in A$, checked
+three times.
+
+**Explained.**
+- A program that automatically reads prices from these sites isn't allowed:
+  - **Booking.com:** its terms ban robots, scrapers and even "automated assistants" without
+    written permission (May 2026 terms). A US court found Booking.com itself liable for accessing
+    Ryanair's site without permission.
+  - **Google Flights:** no public API. Google's terms ban automated access that breaks its
+    robots.txt rules or gets round its protections.
+  - **Trip.com:** its terms could not be read from this session. Trip.com has a free affiliate
+    programme (Awin, Involve Asia) with deep links; its data feed is confirmed only for hotels.
+  - Doing it anyway would also break the master prompt's own rule against scraping in breach of
+    terms, and these sites block bots, so it would fail often.
+- Allowed, free options:
+  - **(A) Link-only:** each run builds exact search links on all three sites (route, dates,
+    1 adult, cabin, AUD) and the email lists them. The live price appears when you click. The app
+    shows no prices of its own, so it can't rank deals or track trends.
+  - **(B) Trip.com affiliate:** join for free; deep links are allowed, but a flight price feed is
+    not confirmed.
+  - **(C) Free price source plus links:** a free API (Travelpayouts was the only one found)
+    finds the cheap dates, and every result carries links to Google Flights, Trip.com and
+    Booking.com for exactly those dates, in AUD.
+- A$ triple check designed (backlog F12).
+
+**Decided.** Waiting for the owner's choice between A, B and C.
+
 ---
 
 ## 2. Definitions
