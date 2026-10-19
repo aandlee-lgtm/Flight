@@ -151,6 +151,18 @@ exactly this. What changes is the focus:
 
 **Decided.** Backlog F14 records the design. Waiting for the owner's city list and target prices.
 
+### 2026-10-19 — Watchlist and target prices
+**Given.** Paris and London under A$1,300; Tokyo and Osaka or Kyoto under A$1,000; Shanghai,
+Guangzhou or Hong Kong under A$1,000. ("fr $1000" was read as "for A$1,000", to be confirmed.)
+
+**Explained.** Kyoto has no airport, so it is covered by Osaka's Kansai and Itami airports, the
+usual way in. Hong Kong is added to the China group. For reference, the first real fare found
+(Tokyo A$1,719, January) would not have met the A$1,000 target, so it would have been listed but
+not flagged as compelling.
+
+**Shipped.** `watchlist.toml` in the repository, for the owner to edit. Nothing built yet
+(waiting for `build_new`).
+
 ---
 
 ## 2. Definitions
