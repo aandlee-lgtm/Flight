@@ -109,6 +109,12 @@ The owner created `aandlee-lgtm.github.io` but couldn't find the GitHub App inst
 Watch" site was published there (destinations, how it works, no prices yet), with a marked place
 in its `<head>` for the Travelpayouts verification snippet.
 
+### 2026-10-19 — Travelpayouts verification code added
+The owner supplied the Travelpayouts verification code: Travelpayouts' "Drive" script, which
+loads from `emrldco.com`. It was placed in the `<head>` of https://aandlee-lgtm.github.io. Drive
+can also turn travel links on that page into Travelpayouts affiliate links. It doesn't touch
+the Flight app or the emails.
+
 ---
 
 ## 2. Definitions
