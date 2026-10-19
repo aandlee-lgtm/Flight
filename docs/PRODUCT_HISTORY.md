@@ -198,6 +198,15 @@ was edited by hand. Tests passed on GitHub and locally (14 unit tests, synthetic
 `v1.0.0` git tag could not be pushed from the Claude session (blocked by the proxy), so the
 release is recorded in RELEASES.md only.
 
+### 20 October 2026 — first automatic run
+The scheduled 6:42 am run (GitHub started it 25 minutes late) and a manual retry failed: the
+website repository had no `TRAVELPAYOUTS_TOKEN` yet, because each repository keeps its own
+secrets. The page was correctly left unchanged. After the owner added the secret, the 8:12 am
+run succeeded and published the page by itself, also starting the price history (20 fares
+recorded). Highlights: Guangzhou A$789, Hong Kong A$858 (Scoot via Singapore, 1 Nov–6 Dec),
+Tokyo A$906 (China Southern via Guangzhou, 1–13 Nov). Paris now shows A$1,355 for 9–17 November,
+just above the A$1,300 target.
+
 ---
 
 ## 2. Definitions
