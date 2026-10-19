@@ -192,7 +192,11 @@ I can look at myself from the web." Then `build_new`.
 - **Owner action needed:** add the same `TRAVELPAYOUTS_TOKEN` secret to the
   `aandlee-lgtm.github.io` repository so the daily run there can search.
 
-**Shipped (1.0.0).** See [RELEASES.md](RELEASES.md).
+**Shipped (1.0.0).** See [RELEASES.md](RELEASES.md). The second preview scan (19 Oct, 9:56 pm
+Sydney) was published as the first live page. Its output is unchanged from the scanner; nothing
+was edited by hand. Tests passed on GitHub and locally (14 unit tests, synthetic fixtures). A
+`v1.0.0` git tag could not be pushed from the Claude session (blocked by the proxy), so the
+release is recorded in RELEASES.md only.
 
 ---
 
