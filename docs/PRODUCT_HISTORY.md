@@ -224,6 +224,23 @@ program, please call out fares that will contribute to these programs with a sma
 **Decided.** Built and tested (19 unit tests) on a branch; the live page is unchanged until the
 owner says `build_new`, per the working rules.
 
+### 1.1.0 — build_new: badges published (21 October 2026)
+**Asked for.** "Can you re-run for today please, build_new."
+
+**Done.** The loyalty badges were merged as 1.1.0 and today's scan was re-run (9:27 am). Checking
+the result showed a flaw: a London fare listed as Virgin Australia carried only a Sky Pearl
+badge. On trips involving several airlines, the listed airline (here Virgin Australia,
+Sydney–Bali) and the airline in the booking link (Xiamen Airlines, onward) differ. The badge now
+considers both, so that fare shows "Velocity (part)" and "Sky Pearl (part)". A regression test
+was added (22 tests), and the scan was run again at 9:29 am. Re-running replaced today's history
+rows instead of duplicating them.
+
+**Badges on today's page:**
+- Sky Pearl: Tokyo A$786 (Xiamen Airlines, 29 Oct–16 Nov) and A$906 (China Southern, 1–13 Nov);
+  Paris A$1,355 and London A$1,420 (China Southern).
+- Velocity (part): London A$1,937, Guangzhou A$1,690 (Virgin Australia plus other airlines), and
+  Tokyo A$1,093 (Singapore Airlines plus another airline).
+
 ---
 
 ## 2. Definitions

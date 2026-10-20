@@ -10,7 +10,8 @@ table:
 - **Sky Pearl**: China Southern, Xiamen, Chongqing, Sichuan, and Sky Pearl partners (American,
   Aerolíneas Argentinas, Air Europa, Air France, China Airlines, Delta, KLM, Korean Air, Vietnam
   Airlines).
-- **"(part)"** means only some of the airlines on the ticket earn.
+- **"(part)"** means only some of the airlines on the trip earn, e.g. Virgin Australia to Bali
+  and then another airline onwards.
 
 A badge means the fare **may** earn. Points depend on the fare class, which the free data does
 not show, so check the fare rules before booking. Both airline lists are in `watchlist.toml` and
