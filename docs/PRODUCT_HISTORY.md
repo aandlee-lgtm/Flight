@@ -207,6 +207,23 @@ recorded). Highlights: Guangzhou A$789, Hong Kong A$858 (Scoot via Singapore, 1 
 Tokyo A$906 (China Southern via Guangzhou, 1–13 Nov). Paris now shows A$1,355 for 9–17 November,
 just above the A$1,300 target.
 
+### 20 October 2026 — Velocity and Sky Pearl badges requested
+**Asked for.** "I am a Velocity frequent flyer as well as a member of the China Southern loyalty
+program, please call out fares that will contribute to these programs with a small indicator."
+
+**Explained.**
+- The free data says which airlines sell each fare (from the booking link). It doesn't say the
+  fare class, and both programmes set points by fare class; some of the cheapest classes earn
+  little or nothing. So a badge can honestly say "may earn", not "will earn".
+- Partner lists came from the programmes' own pages and FAQs found by search. Neither official
+  site could be opened from the Claude session, so Sky Pearl's partner list in particular should
+  be re-checked. Scoot does not appear among Velocity's partners, so Scoot fares get no badge.
+- Examples from today's page that would get a Sky Pearl badge: Tokyo A$906 and Paris A$1,355
+  (both China Southern). Fares sold only partly by an earning airline show "(part)".
+
+**Decided.** Built and tested (19 unit tests) on a branch; the live page is unchanged until the
+owner says `build_new`, per the working rules.
+
 ---
 
 ## 2. Definitions
@@ -227,5 +244,7 @@ just above the A$1,300 target.
   among the cheapest seen for that city and month once enough history exists.
 - **Real (free version)** — found by a real search within the last 3 days, priced in A$, with a
   link that reproduces it. Older prices are dropped.
+- **Loyalty badge** — "Velocity" or "Sky Pearl" beside a fare: the airline(s) selling it earn
+  with that programme. Points still depend on the fare class; "(part)" means only some flights do.
 - **Search link** — a URL that reproduces the route, dates and cabin, not the exact fare; labelled
   as such.
