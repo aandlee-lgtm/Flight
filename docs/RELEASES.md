@@ -1,5 +1,24 @@
 # Sydney Fare Watch — release notes
 
+## 1.1.0 — 21 October 2026
+
+**Velocity and Sky Pearl badges.** Fares sold by an airline that earns with your programmes now
+carry a small badge next to the airline name, in the "Worth a holiday?" cards and in each city
+table:
+- **Velocity**: Virgin Australia, Singapore Airlines, ANA, United, Air Canada, Hainan, Hong Kong
+  Airlines, Tianjin, Beijing Capital.
+- **Sky Pearl**: China Southern, Xiamen, Chongqing, Sichuan, and Sky Pearl partners (American,
+  Aerolíneas Argentinas, Air Europa, Air France, China Airlines, Delta, KLM, Korean Air, Vietnam
+  Airlines).
+- **"(part)"** means only some of the airlines on the ticket earn.
+
+A badge means the fare **may** earn. Points depend on the fare class, which the free data does
+not show, so check the fare rules before booking. Both airline lists are in `watchlist.toml` and
+can be edited.
+
+**Also:** running the scan twice on the same day no longer records that day's prices twice in
+the history.
+
 ## 1.0.0 — 19 October 2026
 
 The first working version: a page that updates itself every morning with the best real fares
