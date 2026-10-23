@@ -262,6 +262,13 @@ trend line in each of the three highlight cards: London A$1,420 → A$1,133 (fla
 three days), Hong Kong A$858 → A$881 (a one-day rise to A$1,087 on 23 Oct), and Shanghai
 A$1,392 → A$894 (its lowest so far, now under the A$1,000 target).
 
+### 24 October 2026 — Adelaide lookout requested
+**Asked for.** "Include a lookout for flights from Virgin Australia to Adelaide on 24th morning,
+one way from Sydney. Please include a trend line for this one too."
+
+**Asked back.** Which month: 24 November 2026, or another? And does "morning" mean departing
+before 12 noon? Recorded as backlog F19 until confirmed.
+
 ---
 
 ## 2. Definitions
