@@ -269,6 +269,20 @@ one way from Sydney. Please include a trend line for this one too."
 **Asked back.** Which month: 24 November 2026, or another? And does "morning" mean departing
 before 12 noon? Recorded as backlog F19 until confirmed.
 
+### 1.3.0 — build_new: Adelaide lookout (24 October 2026)
+**Decided.** The owner said `build_new` without answering the two questions, so the proposed
+defaults were used: Tuesday 24 November 2026, departing Sydney before 12 noon. Both are settings
+in `watchlist.toml`.
+
+**Found before building.** A check of the data source showed no Sydney → Adelaide one-way fare
+for 24 November, and only three for all of November: Jetstar A$124 on 18 Nov, and Virgin
+Australia A$291 and A$298 on 1–2 Nov, both routed via Hobart and Melbourne. Domestic one-way
+coverage in the free data is thin, so the card always carries a live Google Flights search for
+that morning and says plainly when there is no real fare.
+
+**Fixed while building.** The A$150 sanity floor, set for international return fares, would
+have rejected real domestic one-way fares such as Jetstar's A$124. Lookouts use an A$30 floor.
+
 ---
 
 ## 2. Definitions
@@ -291,5 +305,7 @@ before 12 noon? Recorded as backlog F19 until confirmed.
   link that reproduces it. Older prices are dropped.
 - **Loyalty badge** — "Velocity" or "Sky Pearl" beside a fare: the airline(s) selling it earn
   with that programme. Points still depend on the fare class; "(part)" means only some flights do.
+- **Lookout** — one specific one-way flight (route, airline, date, latest departure time)
+  watched every day until its date, with its own trend line.
 - **Search link** — a URL that reproduces the route, dates and cabin, not the exact fare; labelled
   as such.

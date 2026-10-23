@@ -1,5 +1,26 @@
 # Sydney Fare Watch — release notes
 
+## 1.3.0 — 24 October 2026
+
+**Lookout: Sydney → Adelaide, Virgin Australia, one way, Tue 24 November 2026, leaving before
+noon.** A new "Lookout" card at the top of the page:
+- **When a real fare has been found:** the cheapest real Virgin Australia fare for that
+  morning, with departure time, flight number, connections, a Velocity badge, how recently it
+  was found, and a "View fare" link.
+- **Always:** a "Search this morning on Google Flights (A$)" link, so the live price is one tap
+  away even on days with no recorded fare.
+- **Trend line:** built from the days a real fare was seen, ending with today's.
+- **After 24 November** the card says the date has passed.
+- **To change** the date, the airline or the "before noon" time, edit the `[[lookout]]` entry in
+  `watchlist.toml`. More lookouts can be added the same way.
+
+**Limitation:** the free data source holds few domestic one-way prices. When this was built
+there was no fare at all for 24 November, and only three Sydney → Adelaide fares for all of
+November. Expect the card to show "No real fare" on many days.
+
+**Also:** domestic one-way fares use their own sanity floor (A$30). The international floor of
+A$150 would have wrongly rejected real fares such as a Jetstar Sydney → Adelaide fare at A$124.
+
 ## 1.2.0 — 24 October 2026
 
 **Price trend line in "Worth a holiday?".** Each highlighted city now has a small line showing
