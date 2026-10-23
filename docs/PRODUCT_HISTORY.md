@@ -241,6 +241,21 @@ rows instead of duplicating them.
 - Velocity (part): London A$1,937, Guangzhou A$1,690 (Virgin Australia plus other airlines), and
   Tokyo A$1,093 (Singapore Airlines plus another airline).
 
+### 23 October 2026 — trend line requested
+**Asked for.** "If you have access to the historical data, I would like to show a trend line of
+the prices to the destinations, just for the 'Worth a holiday?' section."
+
+**Explained.**
+- Yes. Every daily scan since 20 October is recorded (`data/history.jsonl`, 5 days so far).
+- The line shows each city's **cheapest real fare on each scan day**. The fare behind each point
+  can be for different dates or a different airline from day to day, so the line shows whether
+  that city is getting cheaper overall rather than tracking one flight.
+- Recorded so far (cheapest per day, 20–24 Oct): Tokyo A$906 → 786 → 785 → 785 → 918;
+  Shanghai A$1,392 → 1,392 → 1,529 → 1,036 → 894; Hong Kong A$858 → 858 → 858 → 1,087 → 882;
+  London A$1,420 → 1,420 → 1,133 → 1,133 → 1,133.
+
+**Decided.** Built and tested (25 unit tests) on a branch; publishes on `build_new`.
+
 ---
 
 ## 2. Definitions
