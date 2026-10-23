@@ -1,5 +1,17 @@
 # Sydney Fare Watch — release notes
 
+## 1.2.0 — 24 October 2026
+
+**Price trend line in "Worth a holiday?".** Each highlighted city now has a small line showing
+its cheapest real fare on each day the scan has run (recorded since 20 October), ending with
+today's price.
+- A faint dashed line marks your target price.
+- Hover over a point to see its date and price.
+- A caption gives the first price, today's price and the lowest so far.
+- Each point is that city's cheapest fare on that day, whatever the dates or airline, so the
+  line shows whether the city is getting cheaper overall.
+- A city with fewer than two days of scans shows a short note instead.
+
 ## 1.1.0 — 21 October 2026
 
 **Velocity and Sky Pearl badges.** Fares sold by an airline that earns with your programmes now
