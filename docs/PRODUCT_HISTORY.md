@@ -256,6 +256,12 @@ the prices to the destinations, just for the 'Worth a holiday?' section."
 
 **Decided.** Built and tested (25 unit tests) on a branch; publishes on `build_new`.
 
+### 1.2.0 — build_new: trend lines published (24 October 2026)
+Merged as 1.2.0 (25 tests passing). Today's scan was re-run at 9:19 am and the page now shows a
+trend line in each of the three highlight cards: London A$1,420 → A$1,133 (flat at the low for
+three days), Hong Kong A$858 → A$881 (a one-day rise to A$1,087 on 23 Oct), and Shanghai
+A$1,392 → A$894 (its lowest so far, now under the A$1,000 target).
+
 ---
 
 ## 2. Definitions
