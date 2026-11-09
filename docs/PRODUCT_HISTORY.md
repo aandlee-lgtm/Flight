@@ -283,6 +283,12 @@ that morning and says plainly when there is no real fare.
 **Fixed while building.** The A$150 sanity floor, set for international return fares, would
 have rejected real domestic one-way fares such as Jetstar's A$124. Lookouts use an A$30 floor.
 
+### 9 November 2026 — "This didn't seem to have run today"
+**Checked.** It had run: the scheduled scan started at 6:49 am Sydney time and committed
+"Daily fare scan 2026-11-09", and GitHub Pages published it at 6:50 am. Every daily run from
+3 to 9 November succeeded. The owner was most likely seeing an older copy kept by the browser;
+a refresh of the page fixes that.
+
 ---
 
 ## 2. Definitions
