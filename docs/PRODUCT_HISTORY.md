@@ -339,6 +339,15 @@ Kong 78 tonight).
 **Decided.** Options 1 and 3, published as 1.5.0 when the owner said `build_new` during the
 preview run.
 
+**First 1.5.0 scan (11:00 pm, 159 requests).** The new European cities are as thin as Paris in
+the free data:
+- Rome, Amsterdam and Frankfurt: 0 fares each.
+- Milan: 2 fares; one rejected because it connects in the Middle East / Türkiye, one too old.
+- Barcelona: 1 fare (A$1,540, 20–27 Jan 2027, Air China).
+
+So the extra cities helped little that night. The month links (17 "No recent fare" rows) give a
+live price for every empty month. Daily scans may catch more as travellers search these routes.
+
 ---
 
 ## 2. Definitions
