@@ -316,6 +316,26 @@ morning runs (7:17 and 8:17 am). Before publishing, the back-up skip check was t
 the real commit history: 13 Nov was already scanned, so a back-up would skip; 14 Nov wasn't, so
 it would scan. Re-ran the scan at 10:47 pm and it published correctly.
 
+### 13 November 2026 — why so few Paris fares?
+**Asked.** "Why did the data not have any Paris numbers?"
+
+**Found.** Tonight the source held only **2 Sydney–Paris return fares** across the whole next
+year (found 9 and 11 Nov). One was over 3 days old and was dropped, leaving one: A$1,402 in
+April. Asking a different way did not help:
+- by city (PAR) or by airport (CDG: the same 2; ORY: 1);
+- with or without the Australian market setting;
+- through two other endpoints (both returned the same 2).
+
+The free data only contains prices that travellers searched on Aviasales and its partner sites.
+That audience rarely searches Sydney–Paris. Popular Asian routes get far more (Tokyo 33, Hong
+Kong 78 tonight).
+
+**Options offered** (no decision yet):
+1. Watch more European cities, so a good European fare is still caught.
+2. Show slightly older Paris fares (e.g. up to 7 days), clearly labelled.
+3. Add Google Flights month links on "No recent fare" rows.
+4. A paid live source (ruled out so far).
+
 ---
 
 ## 2. Definitions
