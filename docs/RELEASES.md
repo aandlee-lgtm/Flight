@@ -1,5 +1,23 @@
 # Sydney Fare Watch — release notes
 
+## 1.4.0 — 13 November 2026
+
+**"Lowest recorded" now means a fare you could still book.**
+- **Trips still ahead only.** Each city's lowest recorded price in the last 30 days now ignores
+  trips that have already departed. London had been showing A$1,133 for an 11 November flight.
+- **The dates are shown**, and the line says whether that fare is still in today's list.
+- **If it isn't,** the line says when the fare was last seen and that it may have sold out or
+  changed price, with a link to the last-seen fare and a "Check these dates on Google Flights
+  (A$)" link.
+
+**Business & Premium Economy section.** The free fare data covers economy only, so the page shows
+no premium prices. For each city, two links open live Premium Economy and Business prices in A$
+on Google Flights, for the same dates as that city's cheapest economy trip.
+
+**Back-up morning runs.** GitHub skipped the scheduled scan on 10 November. Two back-up times
+(about 7:17 and 8:17 am Sydney) now scan only if that morning's page hasn't been built, so a
+dropped run is made up the same morning.
+
 ## 1.3.0 — 24 October 2026
 
 **Lookout: Sydney → Adelaide, Virgin Australia, one way, Tue 24 November 2026, leaving before
