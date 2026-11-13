@@ -348,6 +348,22 @@ the free data:
 So the extra cities helped little that night. The month links (17 "No recent fare" rows) give a
 live price for every empty month. Daily scans may catch more as travellers search these routes.
 
+### 13 November 2026 — "the new versions are missing the badges"
+**Checked.** The badges are in the 1.5.0 code and in the published 11:00 pm page (8 in total):
+- **Velocity:** Tianjin Airlines (Guangzhou A$805).
+- **Sky Pearl (part):** Scoot plus China Southern (Osaka A$942).
+- **Sky Pearl:** China Southern and Sichuan Airlines fares in the Tokyo, Shanghai, Guangzhou and
+  Hong Kong tables.
+- The badge legend is at the top of the page.
+
+GitHub Pages published that exact file at 11:02 pm. A screenshot of it was sent to the owner.
+Fewer badges are visible than on earlier days because most of today's cheapest fares are on
+airlines outside both programmes: Garuda Indonesia, Scoot alone, Air China, Philippine Airlines.
+
+**Done.** Added a release-guard test that renders a full page and fails if any feature shipped
+since 1.0 is missing: badge legend, badges in cards, tables and the lookout, trend line, lookout,
+lowest recorded, premium links and month links. The daily run executes it before every scan.
+
 ---
 
 ## 2. Definitions
