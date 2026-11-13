@@ -293,6 +293,23 @@ runs are best-effort and are occasionally dropped when it is busy.
 **Done.** Today's scan was started by hand. A back-up schedule was proposed (backlog F20), to be
 built on `build_new`.
 
+### 13 November 2026 — lowest recorded fare and premium cabins
+**Asked.** (1) London says "lowest recorded A$1,133" but that fare isn't in the list; is it no
+longer available? (2) The page doesn't look for Business or Premium Economy deals. "Please fix
+and run for me to check now."
+
+**Found.**
+1. The A$1,133 London fare was for 11–18 November, a trip that had already flown. The
+   "lowest recorded" figure ignored departure dates. Fixed as backlog F21.
+2. The free data covers economy only (the API says so; see F22). Premium prices can't be shown
+   honestly without a paid source. Instead, each city gets live Google Flights links for both
+   cabins on its best dates.
+
+**Done.** Both built on a branch (32 tests) and run as a preview against tonight's real data
+(10:43 pm). The owner was sent a screenshot. Examples: London now shows A$1,154 for 18–25 Nov,
+last seen 29 Oct; Guangzhou's A$805 (17–25 Nov) is marked as being in today's list. Not yet
+published: the working rules need `build_new`.
+
 ---
 
 ## 2. Definitions
