@@ -310,6 +310,12 @@ and run for me to check now."
 last seen 29 Oct; Guangzhou's A$805 (17–25 Nov) is marked as being in today's list. Not yet
 published: the working rules need `build_new`.
 
+### 1.4.0 — build_new (13 November 2026)
+Published the "lowest recorded" fix, the Business & Premium Economy links and the back-up
+morning runs (7:17 and 8:17 am). Before publishing, the back-up skip check was tested against
+the real commit history: 13 Nov was already scanned, so a back-up would skip; 14 Nov wasn't, so
+it would scan. Re-ran the scan at 10:47 pm and it published correctly.
+
 ---
 
 ## 2. Definitions
