@@ -4,9 +4,12 @@ import json, os, sys, urllib.error, urllib.parse, urllib.request
 TOKEN = os.environ["TRAVELPAYOUTS_TOKEN"]
 BASE = "https://api.travelpayouts.com"
 CALLS = [
-    ("one-way SYD-ADL 24 Nov, all airlines", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="ADL", departure_at="2026-11-24", one_way="true", direct="false", currency="aud", market="au", sorting="price", limit=50)),
-    ("one-way SYD-ADL 24 Nov, unique=false", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="ADL", departure_at="2026-11-24", one_way="true", currency="aud", market="au", sorting="price", unique="false", limit=50)),
-    ("one-way SYD-ADL Nov 2026", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="ADL", departure_at="2026-11", one_way="true", currency="aud", market="au", sorting="price", limit=100)),
+    ("v3 prices_for_dates trip_class=1", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="LON", departure_at="2027-02", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=1)),
+    ("v3 prices_for_dates trip_class=0 (control)", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="LON", departure_at="2027-02", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=0)),
+    ("v2 latest trip_class=1", "/v2/prices/latest", dict(origin="SYD", destination="LON", currency="aud", period_type="year", one_way="false", limit=5, trip_class=1, show_to_affiliates="true")),
+    ("v1 cheap trip_class=1", "/v1/prices/cheap", dict(origin="SYD", destination="LON", currency="aud", trip_class=1)),
+    ("v3 prices_for_dates trip_class=1 TYO", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="TYO", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=1)),
+    ("v3 prices_for_dates trip_class=2 (premium?)", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="TYO", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=2)),
 ]
 for label, path, params in CALLS:
     url = BASE + path + "?" + urllib.parse.urlencode(params)
@@ -23,5 +26,5 @@ for label, path, params in CALLS:
     data = body.get("data") if isinstance(body, dict) else body
     items = list(data.values()) if isinstance(data, dict) else (data or [])
     print("currency:", body.get("currency") if isinstance(body, dict) else None, "| items:", len(items))
-    for item in items[:40]:
-        print({k: item.get(k) for k in ('departure_at','airline','flight_number','price','transfers','gate')}, (item.get('link') or '')[:120])
+    for item in items[:3]:
+        print(json.dumps(item, ensure_ascii=False)[:700])
