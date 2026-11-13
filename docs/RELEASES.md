@@ -1,5 +1,15 @@
 # Sydney Fare Watch — release notes
 
+## 1.5.0 — 13 November 2026
+
+**More European cities.** The free data holds very few Sydney–Paris fares (2 for the whole next
+year when checked). The page now also watches **Rome, Amsterdam, Frankfurt, Milan and
+Barcelona**, each with a target of A$1,300 like Paris and London, so a good fare into Europe is
+caught even when Paris is quiet.
+
+**Live links on empty months.** Every "No recent fare" row now lists its months as links. Each
+opens live Google Flights prices in A$ for return trips departing in that month.
+
 ## 1.4.0 — 13 November 2026
 
 **"Lowest recorded" now means a fare you could still book.**

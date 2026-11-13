@@ -336,6 +336,9 @@ Kong 78 tonight).
 3. Add Google Flights month links on "No recent fare" rows.
 4. A paid live source (ruled out so far).
 
+**Decided.** Options 1 and 3, published as 1.5.0 when the owner said `build_new` during the
+preview run.
+
 ---
 
 ## 2. Definitions
