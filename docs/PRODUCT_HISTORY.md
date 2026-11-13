@@ -390,6 +390,14 @@ London 2.4, against Tokyo 4.8 and Shanghai 3.2.
 (e.g. Duffel, about US$30–40 a month), which the owner has ruled out. Until then, the month links
 on "No recent fare" rows give live prices in one tap.
 
+### 13 November 2026 — Middle East connections allowed
+**Asked.** "Let's change the parameter to include the Middle East like UAE and Qatar."
+
+**Decided.** Middle East connections and hub airlines are allowed. Türkiye remains excluded
+(listed separately in the original brief; not mentioned now; the owner can change it). The rule
+is now a setting, and Qatar Airways gets the Velocity badge. Built on a branch (34 tests) and
+previewed; publishes on `build_new`.
+
 ---
 
 ## 2. Definitions
@@ -399,9 +407,9 @@ on "No recent fare" rows give live prices in one tap.
   unconfirmed); never used in purchase recommendations.
 - **Expired / Unavailable / Rejected** — offer past its expiry / no longer returned on repricing /
   failed a verification rule (e.g. excluded transit).
-- **Excluded transit** — any airport (segment endpoint or technical stop) in UAE, Qatar, Bahrain,
-  Saudi Arabia, Oman, Kuwait, Jordan, Lebanon, Israel, Iran, Iraq, Syria, Yemen, Türkiye or Egypt;
-  with cached data, any fare sold by an airline based there.
+- **Excluded transit** — a connection or technical stop in a country listed in
+  `excluded_transit_countries`, or a fare from a hub airline based there. Until 13 Nov 2026: the
+  Middle East, Türkiye and Egypt. From then: Türkiye only.
 - **Watch** — the label for an indicative fare that is unusually low against comparable history;
   it means "check the live link now", never "buy".
 - **Routing not verified** — a connecting itinerary whose connection airports the free source
