@@ -1,13 +1,16 @@
 name: Preview scan
 # Runs the public Sydney Fare Watch code with this repository's token and prints the page,
 # without publishing anything. Manual only.
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      ref: {description: 'Branch of the website repository to preview', required: false, default: 'main'}
 jobs:
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {repository: aandlee-lgtm/aandlee-lgtm.github.io}
+        with: {repository: aandlee-lgtm/aandlee-lgtm.github.io, ref: '${{ inputs.ref }}'}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: python3 -m unittest discover -s tests -t .
