@@ -1,5 +1,18 @@
 # Sydney Fare Watch — release notes
 
+## 1.6.0 — 13 November 2026
+
+**Middle East connections allowed.** Fares that connect in the UAE, Qatar or elsewhere in the
+Middle East, and fares from airlines based there (Emirates, Etihad, Qatar Airways, …), are now
+shown.
+- **Still excluded:** Türkiye.
+- **Editable:** the excluded list is the `excluded_transit_countries` setting in
+  `watchlist.toml`, and "How this was checked" lists whichever countries are excluded.
+- **Velocity badge:** Qatar Airways now gets one (it is a Velocity partner).
+
+**Expect little change at first.** In the preview, the only extra fare was a Milan trip via Abu
+Dhabi (A$2,292). Emirates, Etihad and Qatar fares from Sydney rarely appear in the free data.
+
 ## 1.5.0 — 13 November 2026
 
 **More European cities.** The free data holds very few Sydney–Paris fares (2 for the whole next

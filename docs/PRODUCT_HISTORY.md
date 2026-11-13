@@ -396,7 +396,8 @@ on "No recent fare" rows give live prices in one tap.
 **Decided.** Middle East connections and hub airlines are allowed. Türkiye remains excluded
 (listed separately in the original brief; not mentioned now; the owner can change it). The rule
 is now a setting, and Qatar Airways gets the Velocity badge. Built on a branch (34 tests) and
-previewed; publishes on `build_new`.
+previewed. The only extra fare in the preview was a Milan trip via Abu Dhabi (A$2,292); no
+Emirates, Etihad or Qatar fares were in the data. Published as 1.6.0 on `build_new`.
 
 ---
 
