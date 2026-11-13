@@ -3,14 +3,7 @@ import json, os, sys, urllib.error, urllib.parse, urllib.request
 
 TOKEN = os.environ["TRAVELPAYOUTS_TOKEN"]
 BASE = "https://api.travelpayouts.com"
-CALLS = [
-    ("v3 prices_for_dates trip_class=1", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="LON", departure_at="2027-02", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=1)),
-    ("v3 prices_for_dates trip_class=0 (control)", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="LON", departure_at="2027-02", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=0)),
-    ("v2 latest trip_class=1", "/v2/prices/latest", dict(origin="SYD", destination="LON", currency="aud", period_type="year", one_way="false", limit=5, trip_class=1, show_to_affiliates="true")),
-    ("v1 cheap trip_class=1", "/v1/prices/cheap", dict(origin="SYD", destination="LON", currency="aud", trip_class=1)),
-    ("v3 prices_for_dates trip_class=1 TYO", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="TYO", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=1)),
-    ("v3 prices_for_dates trip_class=2 (premium?)", "/aviasales/v3/prices_for_dates", dict(origin="SYD", destination="TYO", one_way="false", currency="aud", market="au", sorting="price", limit=5, trip_class=2)),
-]
+CALLS = [('v3 any-date PAR market=au', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'PAR', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000, 'market': 'au'}), ('v3 any-date PAR market=None', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'PAR', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000}), ('v3 any-date CDG market=au', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'CDG', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000, 'market': 'au'}), ('v3 any-date CDG market=None', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'CDG', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000}), ('v3 any-date ORY market=au', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'ORY', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000, 'market': 'au'}), ('v3 any-date ORY market=None', '/aviasales/v3/prices_for_dates', {'origin': 'SYD', 'destination': 'ORY', 'one_way': 'false', 'currency': 'aud', 'sorting': 'price', 'limit': 1000}), ('v3 get_latest_prices PAR year', '/aviasales/v3/get_latest_prices', {'origin': 'SYD', 'destination': 'PAR', 'currency': 'aud', 'period_type': 'year', 'one_way': 'false', 'sorting': 'price', 'limit': 1000}), ('v2 latest PAR', '/v2/prices/latest', {'origin': 'SYD', 'destination': 'PAR', 'currency': 'aud', 'period_type': 'year', 'one_way': 'false', 'limit': 1000, 'show_to_affiliates': 'false'})]
 for label, path, params in CALLS:
     url = BASE + path + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"X-Access-Token": TOKEN, "Accept-Encoding": "identity"})
@@ -26,5 +19,8 @@ for label, path, params in CALLS:
     data = body.get("data") if isinstance(body, dict) else body
     items = list(data.values()) if isinstance(data, dict) else (data or [])
     print("currency:", body.get("currency") if isinstance(body, dict) else None, "| items:", len(items))
-    for item in items[:3]:
+    import collections
+    found=collections.Counter((i.get('found_at') or (i.get('link') or '').split('search_date=')[-1][:8])[:10] for i in items)
+    print('found dates:', dict(sorted(found.items())[-6:]))
+    for item in items[:0]:
         print(json.dumps(item, ensure_ascii=False)[:700])
