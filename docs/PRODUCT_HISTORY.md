@@ -364,6 +364,32 @@ airlines outside both programmes: Garuda Indonesia, Scoot alone, Air China, Phil
 since 1.0 is missing: badge legend, badges in cards, tables and the lookout, trend line, lookout,
 lowest recorded, premium links and month links. The daily run executes it before every scan.
 
+### 13 November 2026 — why is the European data so poor?
+**Asked.** "Why do you think we have such bad incomplete data for European destinations?"
+
+**Explained.**
+1. **Whose searches fill the data.** The free source is a store of prices that travellers found
+   on Aviasales and its partner sites, whose audience is mostly outside Australia. Australians
+   planning Europe mostly use Google Flights, Skyscanner, Webjet, Flight Centre or the airlines
+   directly, so few Sydney–Europe searches reach this store.
+2. **Rare, scattered searches.** Europe is a long, expensive trip booked rarely, and the searches
+   that do happen are spread over many cities, dates and trip lengths. Any one city-and-month
+   seldom gets a recent search. Asian routes are searched far more often (tonight Tokyo had 33
+   fares and Hong Kong 78; Paris had 2, Rome 0).
+3. **Short shelf life plus the 3-day rule.** Stored prices expire after a few days, and the page
+   drops anything older than 3 days, so a thin route empties quickly.
+4. **The usual cheap carriers are excluded or missing.** Much of the Sydney–Europe market is
+   Emirates, Qatar, Etihad and Turkish (excluded by the owner's no-Middle-East rule) or Qantas
+   and Singapore Airlines (rarely in this store). Every Europe fare recorded since 20 October has
+   been Air China, China Southern, China Eastern, Xiamen or Air India.
+
+**Evidence from the history:** on average Paris had a fare in 1.9 of 13 months per day and
+London 2.4, against Tokyo 4.8 and Shanghai 3.2.
+
+**What would fix it:** only a live source that queries the airlines at the moment of the search
+(e.g. Duffel, about US$30–40 a month), which the owner has ruled out. Until then, the month links
+on "No recent fare" rows give live prices in one tap.
+
 ---
 
 ## 2. Definitions
